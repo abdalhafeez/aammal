@@ -1,0 +1,53 @@
+.join {
+  display: flex;
+  margin: 0;
+  list-style: none;
+  justify-content: space-between;
+  transition: ease-in-out 0.5s;
+}
+.join .join-btns {
+flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.middle-links .join-btns a {
+  margin: 5px;
+}
+
+.join a:hover {
+  background: #012085;
+  color: white;
+}
+.join .logout:hover {
+  background: #012085;
+}
+
+.join .logout,
+.log-in,
+.sign-up {
+    background: #03a9f4;
+    width: fit-content;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 2px;
+}
+.join-links .log-in,
+.sign-up {
+  margin: 0;
+}
+.join-btns {
+  transition: ease-in-out 0.5s;
+  z-index: 2;
+}
+.move-join {
+  transform: translateX(93px);
+  width: 159px;
+  top: 10px;
+  right: 25px;
+  z-index: 2;
+}
+.middle-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

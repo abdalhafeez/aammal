@@ -1,0 +1,25 @@
+.sidebar-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 32px;
+  background: #edf2e8;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+
+.sidebar-items a:hover {
+  color: white;
+  letter-spacing: 5px;
+  background-color: #009688;
+}
+.view-profile {
+  background-color: #009688;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+a {color: white;}

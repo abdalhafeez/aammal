@@ -1,0 +1,91 @@
+.add-new-job {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 45px;
+   background: var(--main-bg-color);
+  min-height: calc(100vh - 45px);
+}
+.add-new-job form {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  flex-direction: column;
+}
+.add-new-job form div {
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-new-job form input {
+  border: var(--main-input-border);
+  border-radius: 10px;
+  background: white;
+  flex: 1;
+  padding: 5px;
+  outline: none;
+}
+.add-new-job form label {
+  width: fit-content;
+  margin: 0 10px 0 0;
+  font-size: 20px;
+  font-family: serif;
+}
+
+.add-new-job .salary-parent {
+  justify-content: start;
+}
+.selects{
+    
+    padding: 5px;
+    border-radius: 5px;
+}
+.selects .select-parent{
+justify-content: space-between;
+    align-items: center;
+    background: #f1f7eb;
+    padding: 5px;
+    border-radius: 5px;
+}
+.add-new-job .salary-parent input {
+  flex: 0;
+}
+.add-new-job .textarea-parent {
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.add-new-job form textarea {
+border: var(--main-input-border);
+    border-radius: 10px;
+    background: white;
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    padding-top: 0;
+    resize: none;
+    height: 77px;
+    overflow: hidden;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+/* responsive */
+
+@media only screen and (max-width: 350px) {
+  .add-new-job form div {
+    flex-direction: column;
+  }
+  .add-new-job input {
+    width: 90%;
+  }
+  .add-new-job .textarea-parent {
+    align-items: center;
+  }
+}

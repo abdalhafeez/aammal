@@ -1,0 +1,48 @@
+
+ .slider-spinner{
+      width: 90%;
+    height: 90%;
+    border-radius: 5px;
+    margin: auto;
+    background: #edf2e8;
+}
+.slider {
+    height: fit-content;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+    background-color: rgb(249 251 247);
+}
+.slide {
+  transition: all ease-in-out 1s;
+}
+.slider {
+  overflow: hidden;
+}
+ .high-paying-jobs-parent .arrow {
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+    color: rgb(63 81 181);
+    border-radius: 50px;
+    padding: 1px;
+    background: white;
+}
+.high-paying-jobs-parent .arrows{
+position: absolute;
+    bottom: -2px;
+    display: flex;
+    justify-content: space-between;
+    /* background: #eff3eb47; */
+    z-index: 999;
+    width: 95%;
+    padding: 3px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+.right-arrow:hover {
+  background-color: rgb(233, 231, 231);
+}
+.left-arrow:hover {
+  background-color: rgb(233, 231, 231);
+}

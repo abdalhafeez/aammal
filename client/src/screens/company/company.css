@@ -1,0 +1,17 @@
+.co-profile{
+      margin: 0;
+}
+.middle div {
+  margin: 5px;
+  background: #ffffff;
+  /* box-shadow: var(--main-box-shadow); */
+  padding: 10px;
+  border-radius: 10px;
+}
+.middle .location {
+}
+.middle .contacts {
+}
+.middle .latest-offer {
+  flex-grow: 1;
+}

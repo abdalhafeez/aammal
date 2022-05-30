@@ -1,0 +1,99 @@
+.cadidates-parent {
+  margin-left: auto;
+}
+.candidates-container {
+ padding: 10px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 10px;
+}
+@media only screen and (max-width: 600px) {
+  .candidates-container {
+    grid-template-columns: 99%;
+  }
+}
+
+.candidates-container .candidate {
+  padding: 5px;
+  background: #f9fbf7;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: var(--main-box-shadow);
+}
+.candidates-container .candidate-info {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.candidates-container .candidate img {
+  height: 95px;
+  width: 90px;
+  object-fit: cover;
+  border-radius: 50px;
+}
+.candidates-container .take-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+.candidates-container .status {
+  text-align: center;
+  font-weight: bold;
+  font-family: serif;
+  color: #ff0e7d;
+  padding: 4px;
+  background: black;
+  border-radius: 5px;
+  cursor: not-allowed;
+}
+
+.candidates-container .candidate .view,
+.hire-me {
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 3px;
+}
+.candidates-container .candidate .views {
+  box-shadow: var(--main-box-shadow);
+  padding: 1px 5px;
+  border-radius: 5px;
+}
+.candidates-container .candidate .likes,
+.candidates-container .candidate .questions {
+  cursor: pointer;
+  background-color: var(--main-bg-color);
+  padding: 1px 5px;
+  border-radius: 5px;
+  transition: background ease-in-out 0.5s;
+}
+
+.candidates-container .candidate .likes:hover,
+.candidates-container .candidate .questions:hover {
+  background-color: rgb(207, 207, 207);
+}
+.candidates-container .candidate .view {
+  background-color: #006d77;
+  color: #fff;
+  padding: 3px 10px;
+}
+.candidates-container .candidate .view:hover {
+  transition: background ease-in-out 0.5s;
+  background-color: #00a5b4;
+}
+.candidates-container .candidate .hire-me {
+  background-color: #0ca9f1;
+  color: #fff;
+}
+.candidate-list-title {
+  text-align: center;
+  color: #006d77;
+  /* border-bottom: 2px #b0bba5 solid; */
+  padding: 10px;
+
+  /* margin: 5px 10%; */
+
+  letter-spacing: 2px;
+  border-radius: 25px;
+}

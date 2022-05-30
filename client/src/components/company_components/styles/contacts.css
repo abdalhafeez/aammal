@@ -1,0 +1,82 @@
+.contacts-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    margin: 0;
+    color: white;
+    font-size: 12px;
+    background: #3f51b5;
+    padding-right: 35px;
+    position: relative
+}
+.contacts .email,
+.contacts .phone{
+display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-bottom: 1px #a7adce solid; */
+    padding: 0;
+    margin: 0;
+  }
+ 
+.contacts-container span {
+  border-radius: 3px;
+  padding: 2px;
+}
+.contacts span a {
+
+  font-size: 10px;
+}
+.phone-icon {
+    color: #00e365;
+
+}
+.email-icon{
+    color: #ffffff;
+}
+ 
+.contacts .settings-icon:hover{
+  color: blue;
+
+}
+.contacts-form {
+     position: absolute;
+    left: 19vw;
+    top: 30vh;
+    z-index: 99;
+    background: #ffffff;
+    width: 264px;
+    box-shadow: var(--main-box-shadow);
+    transform: scale(1.5);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2px;
+    border-radius: 10px;
+}
+.icon-to-open{
+      position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.contacts-form input {
+  border: var(--main-input-border);
+  margin: 3px;
+  border-radius: 5px;
+  outline: none;
+  padding: 5px;
+  width: 95%;
+}
+.contacts-form label {
+  color: black;
+}
+.contacts-form .note {
+  font-size: 8px;
+  margin: 0 10px;
+}
+.contacts-form .note .title {
+  color: rgb(255, 94, 94);
+  font-size: 10px;
+  font-weight: 600;
+}

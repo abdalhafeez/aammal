@@ -1,0 +1,239 @@
+.login,
+.register {
+  background-color: var(--main-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 45px;
+  height: 100vh;
+  transition: all 1s;
+  margin: 0;
+  padding: 0;
+}
+.spinner-parent h4{
+      background: #0b30ff;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.spinner-parent h2{
+    font-weight: 600;
+    border-radius: 5px;
+}
+.register h1,
+.login h1 {
+  position: absolute;
+  right: 45vw;
+  top: 50px;
+  font-size: 48px;
+  font-family: cursive;
+  color: #00fff2;
+  padding: 12px;
+  text-align: center;
+}
+.register form,
+.login form {
+  padding: 20px;
+  border-radius: 10px;
+   background: #3f51b5;
+  position: relative;
+}
+.form-color{
+    color: rgb(237 242 232);
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-family: serif;
+}
+.register form .register-note
+ {
+        position: absolute;
+        z-index: 999;
+    top: 40px;
+    left: 54px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: var(--main-box-shadow);
+    padding: 0 10px;
+    color: rgb(255, 88, 88);
+    transform: scale(1.2);
+    padding-bottom: 15px;
+}
+.register form .register-note span {
+       width: 25px;
+    background: white;
+    position: absolute;
+    transform: rotate( 
+45deg
+ );
+    height: 21px;
+    left: 90px;
+    top: 25px;
+    box-shadow: var(--main-box-shadow);
+}
+form .profile-type div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form .profile-type div input:hover {
+  cursor: pointer;
+}
+.register-form label,
+.login-form label {
+  margin: 10px 1px 0 92px;
+  color: wheat;
+  font-weight: 600;
+}
+.register-form,
+.login-form {
+  margin-top: 70px;
+  position: relative;
+  background: #fffff824;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px 0 60px 0;
+  border-radius: 12px;
+  width: 40vw;
+  border: 1px #00ffe6 solid;
+}
+.register-form input,
+.login-form input {
+  height: 34px;
+  width: 360px;
+  border: 1px #00ffe6 solid;
+  align-self: center;
+  margin: 8px;
+  border-radius: 5px;
+  padding: 0 43px;
+  background: #7b63b900;
+  font-size: 17px;
+}
+.register-form input:focus {
+  outline: none;
+}
+.register-form input::placeholder {
+  color: white;
+}
+
+.register-button,
+.login-button,
+.register-submit-button,
+.submit-login-button {
+  right: 1%;
+  bottom: 78%;
+  /* padding: 8px; */
+  width: 159px;
+  border: none;
+  background: linear-gradient(45deg, #00c0fa, #d80298);
+  color: white;
+  font-size: 25px;
+  font-weight: 800;
+  border-radius: 5px;
+  font-family: sans-serif;
+  position: absolute;
+  border: 1px #00dbff solid;
+  cursor: pointer;
+  animation: btn 1s infinite;
+  transition: background all 0.8s ease-in-out;
+}
+.login-err {
+  font-size: 20px;
+  background: red;
+  color: white;
+  margin-left: 116px;
+  width: 300px;
+}
+
+.register .login-button:hover {
+  background: linear-gradient(45deg, #00c0fa, #d80298);
+}
+@keyframes btn {
+  0% {
+    background: linear-gradient(45deg, #d80298, #00c0fa);
+  }
+  100% {
+    background: linear-gradient(45deg, #00c0fa, #d80298);
+  }
+}
+.register-submit-button,
+.submit-login-button {
+  animation: none;
+  position: absolute;
+  right: 196px;
+  bottom: 5px;
+  font-size: 25px;
+  width: 125px;
+  padding: 4px;
+  border: none;
+  color: white;
+  background: #ea00ff;
+}
+.profile-type {
+  display: flex;
+  position: relative;
+  /* padding: 30px 0 0 0; */
+  justify-content: space-around;
+}
+.profile-type input {
+  width: 20px;
+  height: 20px;
+  color: red;
+}
+
+.profile-type label {
+    background: #ffffff;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--main-box-shadow);
+    width: fit-content;
+    height: fit-content;
+    margin: 10px;
+    letter-spacing: 2px;
+    font-family: math;
+    color: #504e4e;
+    border-radius: 5px;
+}
+.auth-actions-ui {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+}
+.photo{
+  color: red;
+}
+.user-photo{
+     color: #ea00ff;
+    font-size: 2rem !important;
+    cursor: pointer;
+    background: #edf2e8;
+    border-radius: 3px;
+    padding: 1px;
+}
+
+.user-photo:hover{
+     color: #a200b1;
+    
+    background: #e8f7d9;
+    
+}
+
+
+.confirm-msg{
+box-shadow: var(--main-box-shadow);
+    position: absolute;
+    margin: 82px 15px;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

@@ -1,0 +1,146 @@
+.company-top {
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.company-top .logo {
+  border-radius: 25%;
+  border: 2px #006d77 solid;
+  width: 74px;
+  padding: 0;
+}
+
+.company-logo {
+    margin: 0 auto;
+    border-radius: 4px;
+    padding: 2px;
+    display: flex;
+    transition: ease-in-out 0.5s;
+    background-color: #ffffff;
+    height: -moz-fit-content;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.company-logo:hover {
+  box-shadow: var(--main-box-shadow);
+}
+.company-logo .company-title {
+  color: #006d77;
+    font-family: serif;
+    font-weight: 600;
+    text-align: center;
+    
+  }
+  .company-logo .name{
+ flex-grow: 1;
+    margin: 3px;
+    position: relative;
+    background: #edf2e8;
+    border-radius: 5px;
+    padding: 10px 25px 0 0;
+}
+.company-logo .moto {
+  position: relative;
+}
+.company-logo .moto h6 {
+  color: rgb(104, 93, 93);
+  padding-top: 10px;
+  letter-spacing: 2px;
+}
+.company-logo .moto p {
+  padding: 5px;
+  border-radius: 5px;
+  color: #686868;
+  background: #f3f3f3; position: relative;
+}
+.company-logo .moto .moto-body::first-letter {
+  color: blue;
+  margin-left: 10px;
+  font-weight: 600;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
+}
+.settings-box {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 3px;
+  align-content: flex-end;
+}
+.moto .header {
+}
+.settings-icon {
+  font-size: 34px;
+  padding: 1px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px rgb(207, 228, 217) solid;
+  transition: background ease-in-out 0.5s;
+}
+.settings-icon:hover {
+  background: #ebffd7;
+}
+.no-comapny-values-message h4 {
+  padding: 5px;
+  color: #4caf50;
+  text-align: center;
+}
+.no-comapny-values-message .note {
+  color: rgb(247 116 182);
+  text-align: center;
+  font-size: 15px;
+}
+.add-values-form {
+  position: absolute;
+  left: 14vw;
+  top: 20vh;
+  transition: all ease-in-out 0.5s;
+  z-index: 99;
+  height: 200px;
+  background: #ffffff;
+  width: 360px;
+  box-shadow: var(--main-box-shadow);
+  transform: scale(1.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+.add-values-form textarea {
+  height: 90%;
+  width: 90%;
+  border: var(--main-input-border);
+  border-radius: 10px;
+  outline: none;
+  margin: 5px;
+  padding: 5px;
+}
+.add-value-submit {
+}
+.close-values-form {
+  align-self: end;
+  color: #ff00a5;
+  background: white;
+  border-radius: 2px;
+  cursor: pointer;
+  position: absolute;
+}
+.overlay {
+  position: absolute;
+  width: 100vw;
+  height: calc(100vh - 45px);
+  background: #020202c7;
+  z-index: 99;
+}
+@media only screen and (max-width: 600px) {
+  .add-values-form {
+    width: 50vw;
+    left: 100px;
+  }
+}

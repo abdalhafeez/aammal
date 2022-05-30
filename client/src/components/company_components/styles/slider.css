@@ -1,0 +1,78 @@
+.photo-slider {
+border: 1px #c5cecf solid;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 0;
+    height: 400px;
+    flex-grow: 1;
+    position: relative;
+}
+.slides-container {
+  display: flex;
+  overflow: hidden;
+  padding: 0;
+  flex-grow: 1;
+  border-radius: 10px;
+  height: 100%;
+}
+.photo-slider .slide {
+  transition: all ease-in-out 1s;
+  margin: 5px 0;
+  height: 100%;
+}
+
+.photo-slider .controls {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    position: absolute;
+    top: 150px;
+}
+.photo-slider .controls .toTheRight,
+.photo-slider .controls .totheLeft,
+.photo-slider .controls .stop {
+  background-color: #03656e47;
+  width: 40px;
+  cursor: pointer;
+  border: 1px #ffffffba solid;
+  height: 39px;
+  border-radius: 30px;
+  padding: 5px;
+  color: wheat;
+}
+.photo-slider .controls .toTheRight:hover,
+.photo-slider .controls .totheLeft:hover,
+.photo-slider .controls .stop:hover {
+  background-color: #03656e99;
+  border: 1px #ffffffba solid;
+  color: white;
+}
+
+.photo-slider .controls .stop {
+  color: white;
+  width: 50px;
+  height: 50px;
+  transition: all ease-in-out 1s;
+  transition: all ease-in-out 0.5s !important;
+  /* visibility: hidden; */
+  display: none;
+}
+.photo-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.show-stop {
+  pointer-events: all;
+  display: block !important;
+}
+.controls .pause-parent {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}

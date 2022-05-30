@@ -1,0 +1,67 @@
+.high-paying-jobs-parent {
+background-color: #3f51b5;
+    border-radius: 10px;
+    height: fit-content;
+    position: relative;
+    padding: 5px;
+}
+.high-paying-jobs-parent header{
+    display: flex;
+    justify-content: space-between;
+    align-items: space-around;
+  }
+  .high-paying-jobs-parent h2{
+  color: #3f51b5;
+      margin-left: 15px;
+}
+.high-paying-jobs-title {
+  margin: 5px;
+  color: #ffffff;
+  letter-spacing: 5px;
+  font-weight: 700;
+  font-family: monospace;
+  padding: 5px;
+  margin-top: 10px;
+
+  /* border-top: 3px #11a876 solid; */
+  border-radius: 20px;
+}
+
+
+.hight-pay-job-img {
+    object-fit: cover;
+    width: 80px;
+    height: 60px;
+    border-radius: 10px;
+    border: 1px #2746f5 solid;
+}
+.high-paying-jobs-parent .company-name {
+  margin: 10px;
+  text-align: center;
+}
+.high-pay-job-title{
+color: coral;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.High-paying-job-description {padding: 5px;
+    margin-left: 15px;
+    background: #fedbce;
+    border-radius: 5px;
+}
+.high-paying-company-name{
+     padding: 5px;
+    margin: 5px;
+    background: blue;
+    color: white;}
+.high-paying-jobs-parent header .company-info{
+    /* padding: 5px;
+    margin: 5px;
+    background: #edf2e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    width: min-content; */
+}

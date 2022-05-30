@@ -1,0 +1,21 @@
+
+.comment-form{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    background: #d8f4e5d6;
+    border-radius: 5px;
+}
+.comment-form textarea{
+   border: 1px #0fc9628c solid;
+    outline: none;
+    padding: 5px;
+    margin: 5px;
+    height: 100px;
+    resize: none;
+    border-radius: 5px;
+}
+.comment-form .comment-actions{
+    display: flex;justify-content: space-between;
+    align-items: center;
+}

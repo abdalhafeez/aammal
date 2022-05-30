@@ -1,0 +1,133 @@
+.comments-parent {
+position: absolute;
+    z-index: 999;
+    background: #fafafa;
+    padding: 0 5px;
+    border-radius: 10px;
+    overflow-y: scroll;
+    max-height: 70vh;
+    box-shadow: 3px 3px 37px -8px #0027ff;
+    width: 300px;
+    bottom: 0;
+ 
+    width: 300px;
+}
+.comments-parent::-webkit-scrollbar{
+   width: 10px;
+}
+.comments-parent::-webkit-scrollbar-thumb{
+        border-radius: 20px;
+    box-shadow: var(--main-box-shadow);
+    background: linear-gradient(45deg, #0fc962, #03a9f4);
+
+}
+.comments-parent::-webkit-scrollbar-track{
+       background: #ecf1e8;
+    border-radius: 20px;
+}
+.comments-parent .comment {
+     padding: 5px;
+    margin: 2px 0 15px 0;
+    background: #ffffff;
+    box-shadow: 0px 0px 27px -19px #0027ff;
+    border-radius: 5px;
+
+}
+
+.comments-parent .comment .body{
+        padding: 3px;
+    font-size: 13px;
+    background: var(--main-child-bg-color);
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.comments-parent .actions{
+          position: sticky;
+    bottom: -15px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+.comment .auther-info{
+     display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background: #fdfffb;
+    margin: 5px;
+    border-bottom: 1px #c5c7c3 solid;
+    padding: 2px;
+    padding-right: 20px;
+    position: relative;
+}
+.comment .auther-options {
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.comment .auther-options .del,
+.comment .auther-options  .edit{
+       border-radius: 3px;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;   
+      background: #edf2e8;
+}
+.comment .auther-options .del:hover,
+.comment .auther-options  .edit:hover{
+     background: #e5fce9;  
+}
+.comment .auther-options .del{
+        color: rgb(255, 43, 43);
+  
+    
+}
+.comment .auther-options  .edit{
+        color: rgb(0, 183, 255);
+}
+.comment .auther-options .del:hover{
+        color: rgb(206, 0, 0);
+}
+.comment .auther-options  .edit:hover{
+     color: rgb(0, 134, 187);
+}
+.comments-parent .actions-section{
+    position: sticky;
+    bottom: 0;
+    background: #0000001f;
+    padding: 5px;
+     border-radius: 5px;
+}
+.close-commet-form{
+        color: red;
+    background: #edf2e8;
+    border-radius: 18px;
+    font-size: 2rem;
+    box-shadow: 0px 0px 14px -3px #0067ff;
+    transform: scale(1.2);
+    margin: 0 10px;
+    cursor: pointer;
+}
+.comments-parent header{
+    border-radius: 5px;
+    position: sticky;
+    top: 0px;
+    z-index: 9;
+
+}
+.comments-parent header h4{
+  
+    background: linear-gradient(45deg, #03aaf0, #0ec66f);
+    width: 100%;
+    color: #fdfffb;
+ 
+}
+.moveDiv{
+        text-align: center;
+    background: #20201f;
+
+    padding: 3px;
+    cursor: move;
+    border-radius: 5px;
+    user-select: none;
+}

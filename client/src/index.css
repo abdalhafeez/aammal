@@ -1,0 +1,157 @@
+body {
+  /* margin: 0; */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.link {
+  text-decoration: none;
+
+}
+ 
+:root {
+  --main-box-shadow: 3px 3px 20px -11px #0027ff;
+  --main-bg-color: #f1f7eb;
+  --main-header-color: #596648;
+  --main-white-transparent: #ffffffd9;
+  --secondary-bg-color: #eff1eb;
+  /* --main-text-color: gray; */
+  --main-red: #e9558e;
+  --success-color: #05da05;
+  --main-parent-bg-color: #f5f8f3;
+  --main-first-child-bg-color: #f5f8f3;
+  --main-child-bg-color: #f9fbf7;
+  --main-input-border: 1px #3f51b5 solid;
+}
+
+.align-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}  */
+@import "~bootstrap/dist/css/bootstrap.css";
+* {
+  margin: 0;
+  padding: 0;
+}
+.bs{
+  box-shadow: 3px 3px 20px -11px #0027ff;
+
+}
+.profile-image {
+  width: 74px;
+  height: 46px;
+  border-radius: 50%;
+}
+
+.main-b-r {
+  border-radius: 10px;
+}
+.mine {
+  border: 1px #3bef8b solid;
+}
+.spacing{
+  letter-spacing: 3px;
+  word-spacing: 4px;
+}
+/* profiles */
+.profile-parent {
+  margin-top: 40px;
+}
+.top-profile-img {
+  height: 200px;
+  border-radius: 50px;
+}
+
+.nav-btn span {
+  position: absolute;
+  border-radius: 10px;
+}
+.nav-btn .line-one {
+  top: 4px;
+  width: 40px;
+  height: 3px;
+  background: white;
+  transition: all ease-in-out 0.5s;
+}
+.nav-btn .line-two {
+  top: 17px;
+  transition: all ease-in-out 0.5s;
+
+  width: 40px;
+  height: 3px;
+  background: white;
+}
+.nav-btn .line-three {
+  bottom: 4px;
+  transition: all ease-in-out 0.5s;
+  width: 40px;
+  height: 3px;
+  background: white;
+}
+.move-nav-icon {
+    transform: translateX(-161px);}
+/* /////////////// */
+
+.line-one-open,
+.line-three-open {
+  transition: all ease-in-out 1s;
+  height: 4px;
+  background: rgb(255, 0, 128);
+  width: 35px;
+}
+.line-one-open {
+  top: 0;
+  border-radius: 5px;
+  transform: rotate(40deg);
+  top: 16px;
+}
+
+.line-two-open {
+  display: none;
+  transition: all ease-in-out 0.5s;
+}
+
+.line-three-open {
+  bottom: 5px;
+  transform: rotate(-40deg);
+  top: 16px;
+}
+.text-second-danger {
+  color: rgb(255, 23, 112);
+}
+
+.App {
+  background: var(--main-bg-color);
+  margin: 0;
+}
+/* Home////////////////// */
+
+
+/* finish home page */
+/* menu */
+.menu {
+  height: 100vh;
+  position: absolute;
+  right: -230px;
+  top: 0;
+  padding-top: 20px;
+  background: white;
+  width: 230px;
+  transition: all ease-in-out 0.5s;
+}
+.open-nav {
+  right: 0;
+}
+/* menu finish */
+
+.job-container {
+  /* margin-left: 50px; */
+}

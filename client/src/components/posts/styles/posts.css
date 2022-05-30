@@ -1,0 +1,118 @@
+.posts {
+}
+.posts .posts-container {
+     display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 10px;
+    padding-bottom: 30px;
+}
+@media only screen and (max-width: 600px) {
+  .posts-container {
+    grid-template-columns: 90%;
+  }
+}
+
+.posts .posts-container .post {
+  background: #f9fbf7;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 7px 0;
+  color: #747474;
+  position: relative;
+}
+.posts .info-and-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.posts .info-and-actions span .icon {
+ cursor: pointer;
+    background-color: var(--main-bg-color);
+    border-radius: 5px;
+    color: #006d77;
+    transition: background ease-in-out 0.5s;
+      
+}
+.post-date{
+      font-size: 12px;
+    font-family: serif;
+}
+.posts .info-and-actions span .like-icon {  margin-right: 5px;
+    border-radius: 5px;}
+.posts .info-and-actions span .like-icon:hover {
+  color: #004147;
+  background-color: rgb(220, 255, 246);
+}
+
+.posts .info-and-actions span .unlike{
+  color: rgb(255, 57, 57);
+}
+.posts .info-and-actions span .unlike:hover{
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 57, 57);
+}
+
+.posts-title,.job-list-title {
+    color: #3f51b5;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px #7e8de1 solid;
+}
+.posts .author-photo{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px #0fc962 solid;
+    padding: 0;
+    margin-right: 10px;
+}
+.posts .latest-posts-options{
+       right: 13px;
+    width: 25px;
+    top: 4px;
+    position: absolute;
+    color: #0fc962;
+    border-radius: 5px;
+    background: #edf2e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out 0.5s;
+    cursor: pointer;
+  }
+  .posts .latest-posts-options:hover{
+    color: #0fc962;
+  background: #d9f3be;
+
+}
+.haslike{
+      color: white;
+    background-color: #0fc962;
+    margin-right: 5px;
+    border-radius: 5px;
+
+}
+.post .interactions{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+/* /////////////////////// */
+@media only screen and (max-width: 800px) {
+  .posts .posts-container {
+    grid-template-columns: 49% 49%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .posts .posts-container {
+    grid-template-columns: 98%;
+  }
+}

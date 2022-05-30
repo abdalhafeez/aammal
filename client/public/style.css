@@ -1,0 +1,20 @@
+#root{
+    /* color:#a4a4a7; */
+}
+
+body::-webkit-scrollbar-track{
+    background: #edf2e8;
+    border-left: 1px #006d77 solid;
+}
+body::-webkit-scrollbar{
+width: 10px;
+}
+body::-webkit-scrollbar-thumb{
+background: #006d77;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+body::-webkit-scrollbar-button{
+background: #006d77;
+    /* border-bottom-left-radius: 15px; */
+}

@@ -1,0 +1,35 @@
+.edit-name-form {
+  position: absolute;
+  left: 20vw;
+  top: 20vh;
+  z-index: 99;
+  background: #ffffff;
+  width: 280px;
+  box-shadow: var(--main-box-shadow);
+  transform: scale(1.5);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2px;
+  border-radius: 10px;
+}
+.edit-name-form input {
+  border: var(--main-input-border);
+  margin: 3px;
+  border-radius: 5px;
+  outline: none;
+  padding: 5px;
+  width: 80%;
+}
+.company-name {
+    position: relative;
+    background: #edf2e8;
+    padding: 0 0 5px 0;
+    margin-bottom: 3px;
+    border-radius: 5px;
+}
+.name-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}

@@ -1,0 +1,76 @@
+.user-drop-menu{
+background-color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    flex-direction: column;
+    position: absolute;
+    right: 35px;
+    top: 30px;
+    width: max-content;
+    box-shadow: 0 37px 91px -18px #000000;
+}
+.user-drop-menu li{
+    margin: 5px;
+    
+}
+.logout-delete-parent{
+      display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-drop-menu .name{
+        border-bottom: 1px #bbc2eb solid;
+    width: 100%;
+    text-align: center;
+    /* background: #f9fbf7; */
+    /* border-radius: 5px; */
+    color: black
+}
+.drop-icon{
+    /* color: #3f51b5; */
+    font-size: 2rem !important;
+
+ }
+ .drop-icon-parent{
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 0 2px;
+    color: #0c31ff;
+    cursor: pointer;
+ }
+ .user-drop-menu .logout,
+ .user-drop-menu .delete {
+    margin: 2px;
+    border-radius: 4px;
+    color: white;
+    transition: all 0.5s;
+    padding: 0 2px;
+    font-weight: bold;
+    font-family: serif;
+}
+.user-drop-menu .logout {
+    background-color: #03a9f4;
+
+}
+.user-drop-menu .delete{
+    background: red;
+}
+.user-drop-menu .user-info{
+      padding: 5px;
+    background: #edf2e8;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5px 0;
+}
+
+.profile-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
