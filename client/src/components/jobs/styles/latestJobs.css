@@ -70,7 +70,7 @@ top: 15vh;
 }
 .job-container .job-title {
     font-weight: 600;
-    color: #f1f7eb;
+    color: #28fc30;
     padding: 5px;
     margin-bottom: 5px;
     border-bottom: 1px #aeb1bd solid;
@@ -118,7 +118,8 @@ top: 15vh;
   
   .job-container p {
     height: fit-content;
-    background-color: #f1f7eb;
+    background-color: #fedbce;
+    color: black;
     width: 100%;
      overflow: hidden;
     margin: 0;

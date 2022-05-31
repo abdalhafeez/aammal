@@ -141,9 +141,7 @@ function LatestJobs({ openDropDown, setOpenDropDown }) {
                   {/* <span className="text-primary">Salary: </span> */}
                   {job.salary}$ per month
                 </span>
-                <p className="description col-11 text-muted ">
-                  {job.description}
-                </p>
+                <p className="description col-11 ">{job.description}</p>
                 <div className="align-items footer  col-12">
                   <span className="job-date">
                     {formatDistance(
