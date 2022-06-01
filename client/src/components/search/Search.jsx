@@ -28,13 +28,7 @@ function Search() {
   const handleSetSearchWord = (e) => {
     setSearchWord(e.target.innerText)
   }
-  // let titles = []
-  // for (let i = 0; i <= 4; i++) {
-  //   titles.puth(jobs.title)
-  // }
-  // setSearchTitles()
   const handleDeleteSeachWord = (id) => {}
-  // console.log(titles)
   return (
     <div className="search-area mt-3  col-md-4 col-12">
       {user && (

@@ -11,7 +11,6 @@ const TopProfiles = ({ profile }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [sliding, setSliding] = useState(true)
   const [sliderWidth, setSliderWidth] = useState(0)
-
   const [highPayingJobs, setHighPayingJobs] = useState(0)
   let widthRef = useRef()
   useEffect(() => {

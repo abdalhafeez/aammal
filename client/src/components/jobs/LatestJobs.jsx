@@ -39,7 +39,6 @@ function LatestJobs({ openDropDown, setOpenDropDown }) {
     }
     fetchjobs()
   }, [deletedJob])
-  console.log(currentJobCat)
   const deleteJobHandler = async (id) => {
     try {
       const res = await axiosInstance.delete(`/jobs/job/${id}`)
@@ -53,7 +52,6 @@ function LatestJobs({ openDropDown, setOpenDropDown }) {
       console.log(error)
     }
   }
-  console.log(jobs)
   // filter job
 
   const filterJobHandler = (event) => {
@@ -65,16 +63,6 @@ function LatestJobs({ openDropDown, setOpenDropDown }) {
     setCurrentJobs(
       jobs?.filter((job) => job.industry.toLowerCase() === currentJobCat)
     )
-    currentJobs.map((job) => {
-      console.log(job.industry.toLowerCase() === currentJobCat)
-      if (job.industry.toLowerCase() === currentJobCat) {
-        event.target.classList.add("active")
-      } else {
-        // event.target.classList.remove("active")
-      }
-    })
-    // if (event.target.classList) {
-    // }
   }
   // setting for pagination
   const indexOfLastJob = currentPage * itemsPerPage
