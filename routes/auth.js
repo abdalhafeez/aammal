@@ -74,47 +74,43 @@ router.post(
     } catch (error) {}
   }
 )
-router.post(
-  "/google",
+router.post("/google", async (req, res) => {
+  const { userName, email, googleId, password, isAdmin, profileType, photo } =
+    req.body
+  let user = await User.find({ $or: [{ googleId }, { email }] })
 
-  async (req, res) => {
-    const { userName, email, googleId, password, isAdmin, profileType, photo } =
-      req.body
-    let user = await User.find({ $or: [{ googleId }, { email }] })
-
-    if (user) {
-      const payload = {
-        user: {
-          id: user.id,
-        },
-      }
-
-      jwt.sign(
-        payload,
-        process.env.JWT_SECRET_KEY,
-        { expiresIn: 36000 },
-        (error, token) => {
-          if (error) throw error
-
-          res.json({ token })
-        }
-      )
+  if (user) {
+    const payload = {
+      user: {
+        id: user.id,
+      },
     }
-    if (!user) {
-      const newuser = {
-        userName,
-        password,
-        email,
-        googleId,
-        isAdmin,
-        profileType,
-        photo,
-      }
-      user = new User(newuser)
 
-      await user.save()
-    }
+    jwt.sign(
+      payload,
+      process.env.JWT_SECRET_KEY,
+      { expiresIn: 36000 },
+      (error, token) => {
+        if (error) throw error
+
+        res.json({ token })
+      }
+    )
   }
-)
+  if (!user) {
+    const newuser = {
+      userName,
+      password,
+      email,
+      googleId,
+      isAdmin,
+      profileType,
+      photo,
+    }
+    user = new User(newuser)
+
+    await user.save()
+  }
+})
 
 module.exports = router;
