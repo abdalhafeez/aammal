@@ -62,12 +62,16 @@ const profileSchema = mongoose.Schema({
       },
     },
   ],
-  GitHubUserName: {
-    type: String,
-  },
+
   social: [
     {
-      link: {
+      linkedIn: {
+        type: String,
+      },
+      GitHubUserName: {
+        type: String,
+      },
+      twitter: {
         type: String,
       },
     },

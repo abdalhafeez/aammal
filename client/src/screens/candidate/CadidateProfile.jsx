@@ -1,7 +1,7 @@
-import "./devProfile.css";
+import "./candidateProfile.css"
 
-import React, { useState, useContext } from "react";
-import { EditSharp, InsertPhotoRounded } from "@material-ui/icons";
+import React, { useState, useContext } from "react"
+import { EditSharp, InsertPhotoRounded } from "@material-ui/icons"
 import { updateProfile, uploadProfilePhoto } from "../../api_Calls/profileCalls"
 import { profileContext } from "../../context/profile_context/profileContext"
 import { authContext } from "../../context/auth_context/authContext"
@@ -70,10 +70,11 @@ const CadidateProfile = () => {
             <span className="visually-hidden">Loading...</span>
           </Spinner>
           {/* create JS animatino */}
-          <h5>Please wait ...</h5>
+          <h3>Please wait ...</h3>
         </div>
       ) : (
         <div className="dev-profile  row">
+          <h1 className=" text-center col-10">My Profile</h1>
           <div className="profile-info col-md-5 row">
             <div className="img-container">
               <img
@@ -211,4 +212,4 @@ const CadidateProfile = () => {
   )
 }
 
-export default CadidateProfile;
+export default CadidateProfile

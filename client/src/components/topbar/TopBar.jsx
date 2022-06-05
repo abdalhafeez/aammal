@@ -31,9 +31,8 @@ function Topbar({ user, openNav, setOpenNav, openDropDown, setOpenDropDown }) {
   return (
     <div className="row m-0 topbar col-12">
       <div className="col col-3  d-flex top-right">
-        {/* <img src={logo} alt="logo" className="logo-img rounded-circle " /> */}
         <Link to="/" className=" link">
-          <h6 className="logo mx-1 link">Aammalonline</h6>
+          <h3 className="logo mx-1 link">Career House</h3>
         </Link>
       </div>
       <div className="col-2 col-md-4">

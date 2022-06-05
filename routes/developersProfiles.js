@@ -84,8 +84,20 @@ router.post("/", authMiddleware, async (req, res) => {
   }
 })
 // add social link
-router.put("/social", authMiddleware, async (req, res) => {
+router.put("/social", [authMiddleware], async (req, res) => {
+  const { linkedIn, GitHubUserName, twitter } = req.body
   const profile = await Profile.findOne({ user: req.user.id })
+
+  let socialObj = {}
+  profile.social.forEach((link) => {
+    profile.social.forEach((link) => {
+      if (GitHubUserName && link.GitHubUserName === "")
+        socialObj.GitHubUserName = GitHubUserName
+      if (linkedIn && link.linkedIn === "") socialObj.linkedIn = linkedIn
+      if (twitter && link.twitter === "") socialObj.twitter = twitter
+    })
+  })
+
   if (!profile) return res.status(404).send("Profile not found")
   profile.social.unshift(req.body)
   // await profile.save()

@@ -7,22 +7,26 @@
   cursor: pointer;
 }
  
-.social-media .f {
-  color: blue;
+.social-media .linkedIn {
+  color:  rgb(6, 193, 255);
 }
-.social-media .y {
-  color: red;
-}
-.social-media .t {
+.social-media .twitter {
   color: rgb(6, 193, 255);
 }
-.social-media .tel {
-  color: rgb(214, 10, 71);
-  /* background-color: rgb(0, 195, 255); */
-  /* border-radius: 50%; */
+.social-media .github {
+  
+    color: rgb(27 36 39);
 }
 .media-link{
-
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    background: white;
+    margin: auto;
+}
+.media-link div{
+    display: flex;
+    justify-content: space-between;
 }
 .media-link input{
 outline: none;
