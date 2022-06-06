@@ -6,7 +6,6 @@ const connentDB = async () => {
     await mongoose.connect(
       // "mongodb://localhost/something",
       process.env.DB_Connetion_URI,
-
       {
         useNewUrlParser: true,
         useCreateIndex: true,

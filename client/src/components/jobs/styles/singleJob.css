@@ -5,37 +5,24 @@
     justify-content: center;
     min-height: 100vh;
     margin: 0;
-    background: #f9fbf7;
     margin-top: 45px;
 }
 
 .single-job .experience-needed ,
  .single-job .education, 
- .single-job .perks{
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0px 0px 26px -26px #0027ff;
-    color: #607d8b;
-    margin: 4px;
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 5px;
-}
-
-.single-job .details-parent, 
-.single-job .more-details, 
-.single-job header{
-background: var(--main-child-bg-color);
-    border-radius: 5px;
-    margin: 10px;
-    display: flex;
-    width: 100%;
+ .single-job .perks,
+ .single-job .working-days{
+    background: linear-gradient(45deg, #f9fff3, #f6f7f5);
+    padding: 10px;
+    border-radius: 10px;}
+.single-job .working-days{
+  display: flex;
+    list-style: none;
     justify-content: space-between;
 }
-.single-job a{
-  color: blue;
-}
- 
+ .job-details-parent{
+   background: #f6f7f5;
+ }
 .single-job .working-days li{
      border-radius: 3px;
     padding: 0;
@@ -43,28 +30,11 @@ background: var(--main-child-bg-color);
     text-align: center;
     list-style-type: none;
 }
- .single-job .days-parent{
-    background: #ffffff;
 
- }
- .days-parent h6{
-   text-align: center;
- }
- .experience-needed{
-    box-shadow: var(--main-box-shadow);
-    border-radius: 50% !important;
-    justify-content: center;
-    align-items: center;
-    background: #3f51b5 !important;
-    color: white !important;
-    font-weight: bold;
-    width: 100px;
-    height: 100px;
- }
-.single-job .experience h6,
- .single-job .education h6,
-  .single-job .perks h6,
-  .single-job .working-days h6{
+
+.single-job .title{
+  padding-right: 5px;
+    color: red;
  font-weight: bold;
 }
 .single-job .perks li{
@@ -75,65 +45,58 @@ list-style-type: none
 }
  
  
-.single-job .details{
-background: #939ac3;
-color: white;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    font-family: ui-sans-serif;
-    font-weight: 600;
-    margin: 0;
-    justify-content: space-between;
-    border-radius: 5px;
-}
-.details .industry{
-      color: #3f51b5;
-    background: #ffffff;
-    padding: 5px;
+.single-job .top{    
+align-items: center;
+    border-bottom: 1px coral solid;}
+.single-job .apply{  
+    color: #0fc962;
     text-transform: capitalize;
+    text-align: center;
+    border: 1px #0fc962 solid;
+    margin: 0 5px;
+    padding: 5px 9px;
+    background: white;
     border-radius: 5px;
+    cursor: pointer;
+    transition: background ease-in-out 0.3s;
+    width: fit-content;
 
+}
+.single-job .apply:hover{
+  background:  #079547;;
+  color: white;
 }
 .single-job .co-info{
-     background: #ffffff;
-     border-radius: 10px;
+    border-radius: 10px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     box-shadow: 3px 3px 19px -16px #0027ff;
-    word-break: break-word;
 
 }
-.co-info h5{
-  margin: 5px;
-}
 .single-job .co-info a{
-        /* color: white; */
-    text-decoration: none;
-    letter-spacing: 1px;
+    color: black;
+    font-weight: bold;
+
 }
+
 .single-job .co-info img{
   width: 60px;
   height: 60px;
   border-radius: 50px;
 }
-.single-job .details div{
-     box-shadow: var(--main-box-shadow);
-    min-height: 160px;
-}
-.single-job .more-details{
+
+.single-job .more-top{
     background-color: #939ac3;
 }
 
-.single-job .more-details h4{
+.single-job .more-top h4{
   color: green;
  }
- .more-details .right{
+ .more-top .right{
   background: var(--main-child-bg-color);
 
  }
- .more-details .left{
+ .more-top .left{
   background: var(--main-child-bg-color);
 
  }
@@ -159,4 +122,28 @@ color: white;
  {
 color: #002397
 
+ }
+ 
+.single-job .sm-related-jobs{
+    padding: 10px;
+    overflow-y: scroll;
+    border-left: 3px #bbbfd7 solid;
+    height: calc(100vh - 50px);
+    background: #f9fff3;
+}
+ .related-job{
+ }
+
+ .single-job .job-details-title{
+     text-transform: capitalize;
+     border-right: 2px #4caf50 solid;
+    border-left: 2px #4caf50 solid;
+    padding: 5px 50px;
+    background: white;
+    width: fit-content;
+ }
+ .single-job .apply-and-title-parent{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
  }

@@ -7,7 +7,7 @@ import Search from "../../components/search/Search"
 import ShowAll from "../../components/posts/ShowAll"
 const HomeScreen = ({ user, openDropDown, setOpenDropDown }) => {
   return (
-    <div className=" home row m-auto mt-5">
+    <div className=" home row m-auto mt-5 col-md-11 col-sm-12">
       {/* <SideBar /> */}
       {/* <div className="sidebar  col-md-2 d-sm-none d-none d-md-block  "></div> */}
       <HighPaying profile={profile} />

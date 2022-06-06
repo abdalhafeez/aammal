@@ -10,26 +10,32 @@ flex-grow: 1;
     display: flex;
     justify-content: flex-end;
 }
-.middle-links .join-btns a {
-  margin: 5px;
-}
 
-.join a:hover {
-  background: #012085;
-  color: white;
-}
-.join .logout:hover {
-  background: #012085;
-}
 
+
+
+ 
 .join .logout,
 .log-in,
 .sign-up {
-    background: #03a9f4;
-    width: fit-content;
-    cursor: pointer;
+    text-decoration: none;
+    padding: 5px;
+    border: 1px #02ff6b solid;
+    width: 50%;
+    text-align: center;
     border-radius: 5px;
-    padding: 2px;
+    color: #ffffff;
+    background: #3f51b5;
+    transition: background ease-in-out 0.3s;
+}
+
+
+  
+  .log-in:hover,
+  .sign-up:hover{
+    background: #ffffff;
+    color: #3f51b5;
+  
 }
 .join-links .log-in,
 .sign-up {
