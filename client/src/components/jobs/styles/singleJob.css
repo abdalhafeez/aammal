@@ -12,13 +12,15 @@
  .single-job .education, 
  .single-job .perks,
  .single-job .working-days{
-    background: linear-gradient(45deg, #f9fff3, #f6f7f5);
-    padding: 10px;
+     padding: 10px;
     border-radius: 10px;}
 .single-job .working-days{
   display: flex;
     list-style: none;
     justify-content: space-between;
+}
+.single-job .working-days li{
+  margin: 0 5px;
 }
  .job-details-parent{
    background: #f6f7f5;
@@ -70,8 +72,7 @@ align-items: center;
     border-radius: 10px;
     display: flex;
     align-items: center;
-    box-shadow: 3px 3px 19px -16px #0027ff;
-
+ 
 }
 .single-job .co-info a{
     color: black;
@@ -138,7 +139,7 @@ color: #002397
      text-transform: capitalize;
      border-right: 2px #4caf50 solid;
     border-left: 2px #4caf50 solid;
-    padding: 5px 50px;
+    padding: 5px 10px;
     background: white;
     width: fit-content;
  }

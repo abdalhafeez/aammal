@@ -49,7 +49,7 @@ function SingleJob() {
              <div className="col-md-7 mx-auto col-ms-11 row job-details-parent">
                <header className=" col-12 row mb-5">
                  <div className="top row col-12 ">
-                   <div className="co-info col-11 ">
+                   <div className="co-info col-12 ">
                      <img src={PF + singleJob?.companyLogo} alt="logo" />
                      <h5>
                        <Link
@@ -110,7 +110,7 @@ function SingleJob() {
                  </div>
                </div>
                <div className="more-details  col-12 row pb-5">
-                 <h2 className="text-center text-white m-2">More Details</h2>
+                 <h2 className="text-center mt-5">More Details</h2>
                  <div className="left col-md-6 col-12">
                    <div className="description">
                      <h4>description</h4>
