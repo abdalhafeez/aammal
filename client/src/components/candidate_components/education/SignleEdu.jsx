@@ -11,8 +11,8 @@ function SingleEdu({ adding, addEdu }) {
   const handleDelete = async (id) => {
     deleteEducation(id)
   }
-  function openOptionHandler(exp) {
-    setOpenOption(exp?._id && exp._id)
+  function openOptionHandler(eduaction) {
+    setOpenOption(eduaction?._id && eduaction._id)
   }
   setTimeout(() => setExpPdf(false), 1000)
   let education = profile?.education

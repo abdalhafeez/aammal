@@ -13,11 +13,7 @@ import SocialMedia from "../../components/candidate_components/social_media/Soci
 import { axiosInstance, PF } from "../../config/axiosInstance"
 import { useLocation } from "react-router-dom"
 const CadidateProfile = () => {
-  const {
-    dispatch,
-    profile: currentProfile,
-    isFetching,
-  } = useContext(profileContext)
+  const { dispatch, isFetching } = useContext(profileContext)
   const [editProfile, setEditProfile] = useState(false)
   const [bio, setBio] = useState("")
   const [title, setTitle] = useState("")
@@ -55,7 +51,7 @@ const CadidateProfile = () => {
   const handleUpload = (e) => {
     uploadProfilePhoto(e, profile, dispatch)
   }
-
+  const authorized = user?._id === profile?.user
   return (
     <>
       {isFetching ? (
@@ -116,9 +112,9 @@ const CadidateProfile = () => {
                   <>
                     <div className="user-name col-12">
                       <h6>{profile?.userName}</h6>
-                      {!editProfile && (
+                      {authorized && !editProfile && (
                         <span
-                          className=" edit-btn"
+                          className="edit-btn"
                           onClick={() => setEditProfile(true)}
                         >
                           <EditSharp />
@@ -161,11 +157,11 @@ const CadidateProfile = () => {
                       <div className="edit-profile-actions-parent">
                         {profile?.title ? (
                           <button className="btn btn-primary btn-sm">
-                            Add
+                            Update
                           </button>
                         ) : (
                           <button className="btn btn-primary btn-sm">
-                            Update
+                            Add
                           </button>
                         )}
 
@@ -183,6 +179,7 @@ const CadidateProfile = () => {
             </form>
 
             <SocialMedia
+              authorized={authorized}
               fetcher={fetcher}
               setFetcher={setFetcher}
               profile={profile}
@@ -192,12 +189,14 @@ const CadidateProfile = () => {
 
           <div className="row col-12 col-md-7">
             <Experience
+              authorized={authorized}
               fetcher={fetcher}
               setFetcher={setFetcher}
               profile={profile}
               user={user}
             />
             <Education
+              authorized={authorized}
               user={user}
               profile={profile}
               fetcher={fetcher}

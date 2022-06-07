@@ -135,13 +135,15 @@ color: #002397
  .related-job{
  }
 
- .single-job .job-details-title{
-     text-transform: capitalize;
-     border-right: 2px #4caf50 solid;
+ .job-details-title{
+    text-transform: capitalize;
+    border-right: 2px #4caf50 solid;
     border-left: 2px #4caf50 solid;
     padding: 5px 10px;
     background: white;
-    width: fit-content;
+    width: -moz-fit-content;
+     flex-grow: 1;
+    margin: 0 10px 0 0;
  }
  .single-job .apply-and-title-parent{
    display: flex;

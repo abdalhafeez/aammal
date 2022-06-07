@@ -17,7 +17,10 @@ function SingleExp({ adding, addExp }) {
   const handleDelete = (id) => {
     deleteExperience(id, dispatch)
   }
-  console.log(profile)
+  function openOptionHandler(experience) {
+    setOpenOption(experience?._id && experience._id)
+    console.log(experience._id, openOption)
+  }
   setTimeout(() => setExpPdf(false), 7000)
 
   return (
@@ -53,14 +56,14 @@ function SingleExp({ adding, addExp }) {
               ) : (
                 <div
                   className="experience"
-                  onClick={() => setOpenOption(false)}
+                  // onClick={() => setOpenOption(false)}
                 >
-                  {authorized && (
-                    <div className="options position-absolute ">
-                      <MoreVertRounded
-                        className="icon"
-                        onClick={() => setOpenOption(exp._id)}
-                      />{" "}
+                  {true && (
+                    <div
+                      className="options position-absolute "
+                      onClick={() => openOptionHandler(exp)}
+                    >
+                      <MoreVertRounded className="icon" />{" "}
                     </div>
                   )}
                   {openOption === exp._id && (

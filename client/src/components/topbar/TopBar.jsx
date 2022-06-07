@@ -29,14 +29,14 @@ function Topbar({ user, openNav, setOpenNav, openDropDown, setOpenDropDown }) {
     }
   }
   return (
-    <div className="row m-0 topbar col-12">
-      <div className="col col-4  d-flex top-right m-auto">
+    <div className="topbar ">
+      <div className=" top-right">
         <Link to="/" className=" link">
           <h6 className="logo mx-1 link">Career House</h6>
         </Link>
       </div>
 
-      <div className="middle-links col-6 col-md-3">
+      <div className="middle-links">
         <>
           {user && (
             <>
@@ -93,7 +93,7 @@ function Topbar({ user, openNav, setOpenNav, openDropDown, setOpenDropDown }) {
         {!pathname.includes("company") && <Join openNav={openNav} />}
       </div>
       <Menu openNav={openNav} />
-      <div className="col-2 d-md-none d-lg-block d-lg-none d-xl-block d-xl-none d-xxl-block ">
+      <div className=" d-md-none d-lg-block d-lg-none d-xl-block d-xl-none d-xxl-block ">
         <div className=" nav-btn  position-relative d-flex justify-content-end">
           <div
             onClick={() => setOpenNav(!openNav)}

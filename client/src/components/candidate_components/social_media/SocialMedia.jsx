@@ -10,7 +10,7 @@ import {
 } from "@material-ui/icons"
 import { useState } from "react"
 import { axiosInstance } from "../../../config/axiosInstance"
-function SocialMedia({ profile }) {
+function SocialMedia({ profile, authorized }) {
   const [showForm, setShowFrom] = useState(false)
   const [linkedIn, setLinkedIn] = useState("")
   const [GitHubUserName, setGitHubUserName] = useState("")
@@ -43,22 +43,41 @@ function SocialMedia({ profile }) {
       console.log(error)
     }
   }
-
+  console.log(authorized)
   return (
-    <div className="social-media align-items col-12 bs p-2 position-relative">
-      <h6 className="text-center text-primary mb-3">check me on:</h6>
-      {!showForm && (
-        <AddBox
-          onClick={() => setShowFrom(true)}
-          className="settings-icon icon-to-open"
-        />
+    <div className="social-media align-items col-10 bs p-2 position-relative row mb-5">
+      {authorized ? (
+        <>
+          {" "}
+          <span>
+            Add your socal media links{" "}
+            <AddBox
+              onClick={() => setShowFrom(true)}
+              className="settings-icon icon-to-open"
+            />
+          </span>
+          <>
+            <h6 className="col-12 text-center text-primary mb-3">
+              check me on:
+            </h6>
+            {!showForm && (
+              <AddBox
+                onClick={() => setShowFrom(true)}
+                className="settings-icon icon-to-open"
+              />
+            )}
+          </>
+        </>
+      ) : (
+        <h4 className="text-primary">No Socail Media Links</h4>
       )}
+
       {showForm && (
         <form className="media-link row my-3" onSubmit={addLinkhandler}>
           <div className="col-12 ">
             <label>
               {" "}
-              <Twitter className="social-media-icon twitter" />
+              <Twitter className="social-media-icon col-4 twitter" />
             </label>
             <input
               autoFocus
@@ -72,7 +91,7 @@ function SocialMedia({ profile }) {
           <div className="col-12 ">
             <label>
               {" "}
-              <GitHub className="social-media-icon github" />
+              <GitHub className="social-media-icon col-4 github" />
             </label>
             <input
               autoFocus
@@ -109,28 +128,39 @@ function SocialMedia({ profile }) {
           </div>
         </form>
       )}
-      <ul className=" align-items">
+      <ul className=" align-items col-12 m-auto row">
         {socialLinks?.map((link) => (
           <>
             {console.log(link.GitHubUserName)}
-            <a href={link.linkedIn} target="_blank" rel="noopener noreferrer">
+            <a
+              className="col-4 "
+              href={link.linkedIn}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {" "}
-              <LinkedIn className="social-media-icon linkedIn" />
+              <LinkedIn className="social-media-icon  linkedIn" />
             </a>
             <a
+              className="col-4 "
               href={link.GitHubUserName}
               target="_blank"
               rel="noopener noreferrer"
             >
               {" "}
               <GitHub
-                className="social-media-icon github"
+                className="social-media-icon   github"
                 onClick={() => {
                   window.open(link.GitHubUserName)
                 }}
               />
             </a>
-            <a href={link.twitter} target="_blank" rel="noopener noreferrer">
+            <a
+              className="col-4 "
+              href={link.twitter}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Twitter className="social-media-icon twitter" />
             </a>
           </>

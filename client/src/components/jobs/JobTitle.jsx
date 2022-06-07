@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 function JobTitle({ job, showNote, setShowNote }) {
   return (
-    <div className="job-title-container col-10 m-auto row">
+    <div className="job-title-container col-10  row">
       {showNote === job._id && (
         <span className="pointer-parent">
           <span className="pointer"></span>

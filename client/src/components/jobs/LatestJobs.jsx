@@ -72,7 +72,7 @@ function LatestJobs({ openDropDown, setOpenDropDown }) {
   }, [jobs])
   return (
     <div className="mt-2 row col-12 m-auto">
-      <h4 className="job-list-title col-12">Latest jobs</h4>
+      <h2 className="job-list-title col-12 mt-5">Latest jobs</h2>
       <nav className="col-10 m-auto categories">
         <ul>
           <li onClick={filterJobHandler} data-id="All" className="">
@@ -127,7 +127,7 @@ function LatestJobs({ openDropDown, setOpenDropDown }) {
                 />
                 <span className="salary">
                   {/* <span className="text-primary">Salary: </span> */}
-                  {job.salary}$ per month
+                  {job.salary}$
                 </span>
                 <p className="description col-11 ">{job.description}</p>
                 <div className="align-items footer  col-12">
@@ -140,18 +140,14 @@ function LatestJobs({ openDropDown, setOpenDropDown }) {
                       }
                     )}
                   </span>
-                  <button className=" details">
-                    {" "}
-                    <Link className="link" to={`job/${job._id}`}>
-                      Details
-                    </Link>
-                  </button>
 
-                  <button className="apply">
-                    <Link className="link" to={`apply/${job._id}`}>
-                      Apply
-                    </Link>
-                  </button>
+                  <Link className="details" to={`job/${job._id}`}>
+                    Details
+                  </Link>
+
+                  <Link className="apply " to={`apply/${job._id}`}>
+                    Apply
+                  </Link>
                 </div>
               </div>
             )
