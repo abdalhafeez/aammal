@@ -27,14 +27,14 @@ function EditedJob() {
   } = useContext(jobContext)
   const { pathname } = useLocation()
   const path = pathname.split("/")[2]
-  const route = `/jobs/job/${path}`
+  const url = `/jobs/job/${path}`
   const id = pathname.split("/").pop()
   console.log(updatedJob)
   console.log(jobError)
   useEffect(() => {
     async function fetchJob() {
       try {
-        const res = await axiosInstance.get(route)
+        const res = await axiosInstance.get(url)
         res.data && setJob(res.data)
       } catch (error) {
         console.log(error)
