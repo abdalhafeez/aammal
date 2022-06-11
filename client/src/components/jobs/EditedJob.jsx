@@ -29,8 +29,6 @@ function EditedJob() {
   const path = pathname.split("/")[2]
   const url = `/jobs/job/${path}`
   const id = pathname.split("/").pop()
-  console.log(updatedJob)
-  console.log(jobError)
   useEffect(() => {
     async function fetchJob() {
       try {
