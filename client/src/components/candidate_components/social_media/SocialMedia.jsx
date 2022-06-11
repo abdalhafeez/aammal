@@ -12,9 +12,9 @@ import { useState } from "react"
 import { axiosInstance } from "../../../config/axiosInstance"
 function SocialMedia({ profile, authorized }) {
   const [showForm, setShowFrom] = useState(false)
-  const [linkedIn, setLinkedIn] = useState("")
-  const [GitHubUserName, setGitHubUserName] = useState("")
-  const [twitter, setTwitter] = useState("")
+  const [linkedInState, setLinkedIn] = useState("")
+  const [GitHubUserNameState, setGitHubUserName] = useState("")
+  const [twitterState, setTwitter] = useState("")
   const [socialLinks, setSocialLinks] = useState(profile.social)
 
   const addLinkhandler = async (e) => {
@@ -25,9 +25,9 @@ function SocialMedia({ profile, authorized }) {
     }
     e.preventDefault()
     const body = {
-      linkedIn,
-      GitHubUserName,
-      twitter,
+      linkedIn: linkedInState,
+      GitHubUserName: GitHubUserNameState,
+      twitter: twitterState,
     }
     try {
       const res = await axiosInstance.put(
@@ -38,12 +38,15 @@ function SocialMedia({ profile, authorized }) {
       if (res.data) {
         setShowFrom(false)
         setSocialLinks(res.data)
+        console.log(res.data)
       }
     } catch (error) {
       console.log(error)
     }
   }
-  console.log(authorized)
+  // const [GitHubUserName, twitter, linkedIn] = socialLinks
+  // console.log(GitHubUserName, twitter, linkedIn)
+  console.log(socialLinks)
   return (
     <div className="social-media align-items col-10 bs p-2 position-relative row mb-5">
       {authorized ? (
@@ -57,9 +60,11 @@ function SocialMedia({ profile, authorized }) {
             />
           </span>
           <>
-            <h6 className="col-12 text-center text-primary mb-3">
-              check me on:
-            </h6>
+            {!authorized && (
+              <h6 className="col-12 text-center text-primary mb-3">
+                check me on:
+              </h6>
+            )}
             {!showForm && (
               <AddBox
                 onClick={() => setShowFrom(true)}
@@ -69,7 +74,11 @@ function SocialMedia({ profile, authorized }) {
           </>
         </>
       ) : (
-        <h4 className="text-primary">No Socail Media Links</h4>
+        <>
+          {socialLinks.length && (
+            <h4 className="text-primary">No Socail Media Links</h4>
+          )}
+        </>
       )}
 
       {showForm && (
@@ -88,6 +97,7 @@ function SocialMedia({ profile, authorized }) {
               type="text"
             />
           </div>
+
           <div className="col-12 ">
             <label>
               {" "}
@@ -131,38 +141,42 @@ function SocialMedia({ profile, authorized }) {
       <ul className=" align-items col-12 m-auto row">
         {socialLinks?.map((link) => (
           <>
-            {console.log(link.GitHubUserName)}
-            <a
-              className="col-4 "
-              href={link.linkedIn}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {" "}
-              <LinkedIn className="social-media-icon  linkedIn" />
-            </a>
-            <a
-              className="col-4 "
-              href={link.GitHubUserName}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {" "}
-              <GitHub
-                className="social-media-icon   github"
-                onClick={() => {
-                  window.open(link.GitHubUserName)
-                }}
-              />
-            </a>
-            <a
-              className="col-4 "
-              href={link.twitter}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Twitter className="social-media-icon twitter" />
-            </a>
+            {link.linkedIn && (
+              <a
+                className="col-4 "
+                href={link.linkedIn}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <LinkedIn className="social-media-icon  linkedIn" />
+              </a>
+            )}
+            {link.GitHubUserName != "" && (
+              <a
+                className="col-4 "
+                href={link.GitHubUserName}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {" "}
+                <GitHub
+                  className="social-media-icon   github"
+                  onClick={() => {
+                    window.open(link.GitHubUserName)
+                  }}
+                />
+              </a>
+            )}
+            {link.twitter && (
+              <a
+                className="col-4 "
+                href={link.twitter}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Twitter className="social-media-icon twitter" />
+              </a>
+            )}
           </>
         ))}
       </ul>

@@ -57,8 +57,8 @@ import { Spinner } from "react-bootstrap"
                <form className=" col-10 col-md-5" onSubmit={handleSubmit}>
                  <h3 className="text-center form-color ">Log In</h3>
                  {errors && (
-                   <div className="auth-errors bg-white text-danger">
-                     something wrong
+                   <div className="auth-errors text-danger">
+                     {errors.message}
                    </div>
                  )}
                  <div className="form-group">

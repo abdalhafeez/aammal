@@ -14,7 +14,7 @@ background-color: #ffffff;
 }
 .user-drop-menu li{
     margin: 5px;
-    
+    list-style: none;
 }
 .logout-delete-parent{
       display: flex;
