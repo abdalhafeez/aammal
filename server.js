@@ -29,7 +29,7 @@ app.use("/api/products", require("./routes/products"))
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")))
 // this should be placed under all routes
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(__dirname, "/client/build"))
+  app.use(express.static("client/build"))
   app.get("*", (req, res) => {
     app.use(
       express.static(path.resolve(__dirname, "client", "build", "index.html"))
