@@ -1,5 +1,5 @@
 ### Hello and Welcome to Aamal project
->**```The Application is deployed on Heroku:```** www.aamal.herokiapp.com
+>**```The Application is deployed on Heroku:``
 
 
 ##### The App is built using the following Technologies:
